@@ -17,5 +17,8 @@ public class CourseJdbcCMDRunner implements CommandLineRunner {
         repository.insert(new Course(2, "Azure", "costelas"));
         repository.insert(new Course(3, "Firebase", "costelas"));
         repository.deleteById(1);
+
+        System.out.println(repository.findById(2));
+        System.out.println(repository.findById(3));
     }
 }
