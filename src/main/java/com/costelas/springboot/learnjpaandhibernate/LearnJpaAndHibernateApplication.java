@@ -9,5 +9,4 @@ public class LearnJpaAndHibernateApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(LearnJpaAndHibernateApplication.class, args);
 	}
-
 }

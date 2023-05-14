@@ -3,9 +3,11 @@ package com.costelas.springboot.learnjpaandhibernate.course.jdbc.course.jpa;
 import com.costelas.springboot.learnjpaandhibernate.course.jdbc.course.Course;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
 @Repository
+@Transactional
 public class CourseJpaRepository {
     // we use JPA to talk to the database here:
     @PersistenceContext // kinda same as @Autowired
