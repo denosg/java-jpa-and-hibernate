@@ -1,15 +1,16 @@
 package com.costelas.springboot.learnjpaandhibernate.course.jdbc;
 
 import com.costelas.springboot.learnjpaandhibernate.course.jdbc.course.Course;
+import com.costelas.springboot.learnjpaandhibernate.course.jdbc.course.jpa.CourseJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CourseJdbcCMDRunner implements CommandLineRunner {
+public class CourseCMDRunner implements CommandLineRunner {
 
     @Autowired
-    private CourseJDBCRepository repository;
+    private CourseJpaRepository repository;
 
     @Override
     public void run(String... args) throws Exception {
