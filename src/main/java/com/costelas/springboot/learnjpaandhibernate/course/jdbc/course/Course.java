@@ -1,14 +1,24 @@
 package com.costelas.springboot.learnjpaandhibernate.course.jdbc.course;
 
-import org.springframework.stereotype.Component;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity // creates a mapping between our java bean and the table, we will use that mapping to fetch and send values
 public class Course {
+    // here we are creating a mapping from this bean to the table
+    @Id
     private long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "author")
     private String author;
 
     // constructor
-    public Course() {}
+    public Course() {
+    }
 
     public Course(long id, String name, String author) {
         this.id = id;
